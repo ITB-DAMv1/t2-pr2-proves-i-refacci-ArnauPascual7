@@ -16,7 +16,16 @@
         }
         public static void ProgramCore()
         {
-            double width = 0, height = 0, area = 0, radius = 0, circumference = 0;
+            RectangleProgram();
+
+            CircleProgram();
+
+            // Imprimeix un missatge basat en el valor de l'àrea
+            AreaResponse(area);
+        }
+        public static void RectangleProgram()
+        {
+            double width = 0, height = 0, area = 0
 
             // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
             width = ReadReactangleWidth();
@@ -25,15 +34,16 @@
             // Calcula l'àrea
             area = CalculateRectangleArea(width, height);
             Console.WriteLine(MsgRectangleArea + area);
+        }
+        public static void CircleProgram()
+        {
+            double radius = 0, circumference = 0;
 
             // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
             radius = ReadCircleRadius();
             circumference = CalculateCircleCircumference(radius);
 
             Console.WriteLine(MsgCircumferenceCircle + circumference);
-
-            // Imprimeix un missatge basat en el valor de l'àrea
-            AreaResponse(area);
         }
         public static double ReadReactangleWidth()
         {
