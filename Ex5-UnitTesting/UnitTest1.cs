@@ -84,6 +84,44 @@ namespace Ex5_UnitTesting
             // Assert
             Assert.True(flag);
         }
+        [Theory]
+        [InlineData("")]
+        public void VerifyColourNull(string s)
+        {
+            // Arrange & Act
+            int exp = -1;
+            PersonaHelper verifyColour = new PersonaHelper();
+            int result = verifyColour.VerifyColour(s);
+
+            // Assert
+            Assert.Equal(exp, result);
+        }
+        [Theory]
+        [InlineData("blau")]
+        [InlineData("verd")]
+        public void VerifyColourBlueGreen(string s)
+        {
+            // Arrange & Act
+            int exp = 0;
+            PersonaHelper verifyColour = new PersonaHelper();
+            int result = verifyColour.VerifyColour(s);
+
+            // Assert
+            Assert.Equal(exp, result);
+        }
+        [Theory]
+        [InlineData("vermell")]
+        [InlineData("poma")]
+        public void VerifyColourOther(string s)
+        {
+            // Arrange & Act
+            int exp = 1;
+            PersonaHelper verifyColour = new PersonaHelper();
+            int result = verifyColour.VerifyColour(s);
+
+            // Assert
+            Assert.Equal(exp, result);
+        }
 
     }
 }
