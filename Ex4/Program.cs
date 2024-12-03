@@ -27,11 +27,9 @@
         {
             double width = 0, height = 0, area = 0
 
-            // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
             width = ReadReactangleWidth();
             height = ReadReactangleHeight();
 
-            // Calcula l'àrea
             area = CalculateRectangleArea(width, height);
             Console.WriteLine(MsgRectangleArea + area);
         }
@@ -39,7 +37,6 @@
         {
             double radius = 0, circumference = 0;
 
-            // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
             radius = ReadCircleRadius();
             circumference = CalculateCircleCircumference(radius);
 
