@@ -29,18 +29,7 @@
             Console.WriteLine(MsgCircumferenceCircle + circumference);
 
             // Imprimeix un missatge basat en el valor de l'àrea
-            if (area > 50)
-            {
-                Console.WriteLine(MsgAreaHigher);
-            }
-            else if (area > 20)
-            {
-                Console.WriteLine(MsgAreaBetween);
-            }
-            else
-            {
-                Console.WriteLine(MsgAreaLower);
-            }
+            AreaResponse(area);
         }
         public static double ReadReactangleWidth()
         {
@@ -64,6 +53,21 @@
         public static double CalculateCircleCircumference(double radius)
         {
             return 2 * Math.PI * radius;
+        }
+        public static void AreaResponse(double area)
+        {
+            if (area > 50)
+            {
+                Console.WriteLine(MsgAreaHigher);
+            }
+            else if (area > 20)
+            {
+                Console.WriteLine(MsgAreaBetween);
+            }
+            else
+            {
+                Console.WriteLine(MsgAreaLower);
+            }
         }
         public static double ValidateUserInput()
         {
