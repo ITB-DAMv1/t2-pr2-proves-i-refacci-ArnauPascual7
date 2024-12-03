@@ -16,16 +16,18 @@
         }
         public static void ProgramCore()
         {
-            RectangleProgram();
+            double area = 0;
+
+            RectangleProgram(ref area);
 
             CircleProgram();
 
             // Imprimeix un missatge basat en el valor de l'àrea
             AreaResponse(area);
         }
-        public static void RectangleProgram()
+        public static void RectangleProgram(ref double area)
         {
-            double width = 0, height = 0, area = 0
+            double width = 0, height = 0;
 
             width = ReadReactangleWidth();
             height = ReadReactangleHeight();
