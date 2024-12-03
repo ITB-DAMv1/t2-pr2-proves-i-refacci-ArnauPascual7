@@ -19,7 +19,7 @@
             height = ReadReactangleHeight();
 
             // Calcula l'àrea
-            area = width * height;
+            area = CalculateRectangleArea(width, height);
             Console.WriteLine(MsgRectangleArea + area);
 
             // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
@@ -52,6 +52,10 @@
         {
             Console.WriteLine(MsgInpRectangleHeight);
             return ValidateUserInput();
+        }
+        public static double CalculateRectangleArea(double width, double height)
+        {
+            return width * height;
         }
         public static double ValidateUserInput()
         {
