@@ -122,6 +122,44 @@ namespace Ex5_UnitTesting
             // Assert
             Assert.Equal(exp, result);
         }
+        [Fact]
+        public void PersonalityTestMati()
+        {
+            // Arrange & Act
+            string s = "matí";
+            int exp = 0;
+            PersonaHelper personalityTest = new PersonaHelper();
+            int result = personalityTest.PersonalityTest(s);
+
+            // Assert
+            Assert.Equal(exp, result);
+        }
+        [Fact]
+        public void PersonalityTestNit()
+        {
+            // Arrange & Act
+            string s = "nit";
+            int exp = 1;
+            PersonaHelper personalityTest = new PersonaHelper();
+            int result = personalityTest.PersonalityTest(s);
+
+            // Assert
+            Assert.Equal(exp, result);
+        }
+        [Theory]
+        [InlineData("TARDA")]
+        [InlineData("Vespre")]
+        [InlineData("alba")]
+        public void PersonalityTestOther(string s)
+        {
+            // Arrange & Act
+            int exp = 2;
+            PersonaHelper personalityTest = new PersonaHelper();
+            int result = personalityTest.PersonalityTest(s);
+
+            // Assert
+            Assert.Equal(exp, result);
+        }
 
     }
 }
