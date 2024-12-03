@@ -12,20 +12,22 @@
         const string MsgAreaLower = "L'àrea és menor o igual a 20";
         static void Main(string[] args)
         {
+            double width = 0, height = 0, area = 0, radius = 0, circumference = 0;
+
             // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
             Console.WriteLine(MsgInpRectangleWidth);
-            double width = Convert.ToDouble(Console.ReadLine());
+            width = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(MsgInpRectangleHeight);
-            double height = Convert.ToDouble(Console.ReadLine());
+            height = Convert.ToDouble(Console.ReadLine());
 
             // Calcula l'àrea
-            double area = width * height;
+            area = width * height;
             Console.WriteLine(MsgRectangleArea + area);
 
             // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
             Console.WriteLine(MsgInpCircleRadius);
-            double radius = Convert.ToDouble(Console.ReadLine());
-            double circumference = 2 * Math.PI * radius;
+            radius = Convert.ToDouble(Console.ReadLine());
+            circumference = 2 * Math.PI * radius;
 
             Console.WriteLine(MsgCircumferenceCircle + circumference);
 
