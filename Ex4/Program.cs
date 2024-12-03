@@ -16,8 +16,7 @@
 
             // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
             width = ReadReactangleWidth();
-            Console.WriteLine(MsgInpRectangleHeight);
-            height = ValidateUserInput();
+            height = ReadReactangleHeight();
 
             // Calcula l'àrea
             area = width * height;
@@ -47,6 +46,11 @@
         public static double ReadReactangleWidth()
         {
             Console.WriteLine(MsgInpRectangleWidth);
+            return ValidateUserInput();
+        }
+        public static double ReadReactangleHeight()
+        {
+            Console.WriteLine(MsgInpRectangleHeight);
             return ValidateUserInput();
         }
         public static double ValidateUserInput()
