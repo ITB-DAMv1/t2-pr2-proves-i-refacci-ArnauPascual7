@@ -60,5 +60,30 @@ namespace Ex5_UnitTesting
             // Assert
             Assert.Equal(exp, result);
         }
+        [Theory]
+        [InlineData(12)]
+        [InlineData(-10)]
+        public void IsEvenTrue(int age)
+        {
+            // Arrange & Act
+            PersonaHelper isEven = new PersonaHelper();
+            bool flag = isEven.IsEven(age);
+
+            // Assert
+            Assert.True(flag);
+        }
+        [Theory]
+        [InlineData(28)]
+        [InlineData(-4)]
+        public void IsEvenFalse(int age)
+        {
+            // Arrange & Act
+            PersonaHelper isEven = new PersonaHelper();
+            bool flag = isEven.IsEven(age);
+
+            // Assert
+            Assert.True(flag);
+        }
+
     }
 }
