@@ -24,7 +24,7 @@
 
             // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
             radius = ReadCircleRadius();
-            circumference = 2 * Math.PI * radius;
+            circumference = CalculateCircleCircumference(radius);
 
             Console.WriteLine(MsgCircumferenceCircle + circumference);
 
@@ -60,6 +60,10 @@
         {
             Console.WriteLine(MsgInpCircleRadius);
             return ValidateUserInput();
+        }
+        public static double CalculateCircleCircumference(double radius)
+        {
+            return 2 * Math.PI * radius;
         }
         public static double ValidateUserInput()
         {
