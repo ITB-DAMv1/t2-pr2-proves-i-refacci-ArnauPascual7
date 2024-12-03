@@ -12,6 +12,10 @@
         const string MsgAreaLower = "L'àrea és menor o igual a 20";
         static void Main(string[] args)
         {
+            ProgramCore();
+        }
+        public static void ProgramCore()
+        {
             double width = 0, height = 0, area = 0, radius = 0, circumference = 0;
 
             // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
