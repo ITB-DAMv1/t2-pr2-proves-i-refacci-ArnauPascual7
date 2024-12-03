@@ -16,9 +16,9 @@
 
             // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
             Console.WriteLine(MsgInpRectangleWidth);
-            width = Convert.ToDouble(Console.ReadLine());
+            width = ValidateUserInput();
             Console.WriteLine(MsgInpRectangleHeight);
-            height = Convert.ToDouble(Console.ReadLine());
+            height = ValidateUserInput();
 
             // Calcula l'àrea
             area = width * height;
@@ -26,7 +26,7 @@
 
             // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
             Console.WriteLine(MsgInpCircleRadius);
-            radius = Convert.ToDouble(Console.ReadLine());
+            radius = ValidateUserInput();
             circumference = 2 * Math.PI * radius;
 
             Console.WriteLine(MsgCircumferenceCircle + circumference);
@@ -44,6 +44,19 @@
             {
                 Console.WriteLine(MsgAreaLower);
             }
+        }
+        public static double ValidateUserInput()
+        {
+            double num = 0;
+            try
+            {
+                num = Convert.ToDouble(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                num = 1;
+            }
+            return num;
         }
     }
 }
