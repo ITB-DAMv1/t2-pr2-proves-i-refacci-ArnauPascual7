@@ -23,8 +23,7 @@
             Console.WriteLine(MsgRectangleArea + area);
 
             // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
-            Console.WriteLine(MsgInpCircleRadius);
-            radius = ValidateUserInput();
+            radius = ReadCircleRadius();
             circumference = 2 * Math.PI * radius;
 
             Console.WriteLine(MsgCircumferenceCircle + circumference);
@@ -56,6 +55,11 @@
         public static double CalculateRectangleArea(double width, double height)
         {
             return width * height;
+        }
+        public static double ReadCircleRadius()
+        {
+            Console.WriteLine(MsgInpCircleRadius);
+            return ValidateUserInput();
         }
         public static double ValidateUserInput()
         {
